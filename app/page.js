@@ -58,14 +58,41 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 px-6 md:px-16 text-center max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p className="text-gray-400">
-          I am a pre-final year Computer Science student with strong skills in Java,
-          Data Structures, and frontend development. I enjoy building real-world applications
-          and solving complex problems efficiently.
-        </p>
-      </section>
+      <section id="about" className="py-24 px-6 md:px-16 max-w-4xl mx-auto text-center">
+  
+  <h2 className="text-4xl font-bold mb-6">About Me</h2>
+
+  <p className="text-gray-400 mb-8">
+    I am a pre-final year Computer Science student with strong skills in Java,
+    Data Structures, and frontend development. I enjoy building real-world applications
+    and solving complex problems efficiently.
+  </p>
+
+  {/* SKILLS */}
+  <div className="flex flex-wrap justify-center gap-4">
+
+    {[
+      "Java",
+      "Python",
+      "JavaScript",
+      "SQL",
+      "React",
+      "HTML",
+      "CSS",
+      "Git",
+      "Machine Learning"
+    ].map((skill) => (
+      <span
+        key={skill}
+        className="px-4 py-2 bg-gray-800 rounded-full text-sm hover:bg-blue-600 transition"
+      >
+        {skill}
+      </span>
+    ))}
+
+  </div>
+
+</section>
 
       {/* SERVICES */}
       <section id="services" className="py-24 px-6 md:px-16 text-center">
@@ -99,30 +126,85 @@ export default function Home() {
 
       {/* PROJECTS */}
       <section id="projects" className="py-24 px-6 md:px-16">
-        <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+  <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
 
-          <div className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-            <Image src="/project1.png" alt="fraud" width={500} height={300} className="rounded mb-4"/>
-            <h3 className="text-xl font-bold">Online Payment Fraud Detection</h3>
-            <p className="text-gray-400 mt-2">
-              Built a machine learning model using Logistic Regression and Random Forest
-              to detect fraudulent transactions with high accuracy.
-            </p>
-          </div>
+    {/* PROJECT 1 */}
+    <div className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
 
-          <div className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-            <Image src="/project2.png" alt="agri" width={500} height={300} className="rounded mb-4"/>
-            <h3 className="text-xl font-bold">AgriDirect E-Commerce Platform</h3>
-            <p className="text-gray-400 mt-2">
-              Developed a responsive platform connecting farmers with consumers
-              using modern frontend technologies.
-            </p>
-          </div>
+      <Image
+        src="/project1.png"
+        alt="Fraud Detection"
+        width={500}
+        height={300}
+        className="rounded mb-4"
+      />
 
-        </div>
-      </section>
+      <h3 className="text-2xl font-bold">
+        Online Payment Fraud Detection
+      </h3>
+
+      <p className="text-gray-400 mt-3">
+        Developed a machine learning-based system to identify fraudulent financial transactions
+        using real-world datasets. The model analyzes transaction patterns and flags suspicious
+        activities with high accuracy.
+      </p>
+
+      {/* FEATURES */}
+      <ul className="text-gray-400 mt-4 list-disc list-inside space-y-1">
+        <li>Implemented Logistic Regression and Random Forest models</li>
+        <li>Achieved high precision using optimized data preprocessing</li>
+        <li>Evaluated performance using confusion matrix and ROC curve</li>
+        <li>Visualized fraud patterns using Matplotlib</li>
+      </ul>
+
+      {/* TECH STACK */}
+      <p className="mt-4 text-sm text-blue-400">
+        Tech: Python, Pandas, NumPy, Machine Learning
+      </p>
+
+    </div>
+
+
+    {/* PROJECT 2 */}
+    <div className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
+
+      <Image
+        src="/project2.png"
+        alt="AgriDirect"
+        width={500}
+        height={300}
+        className="rounded mb-4"
+      />
+
+      <h3 className="text-2xl font-bold">
+        AgriDirect – Farm to Consumer Platform
+      </h3>
+
+      <p className="text-gray-400 mt-3">
+        Built a responsive e-commerce platform that connects farmers directly with consumers,
+        eliminating middlemen and ensuring fair pricing. Focused on delivering a seamless
+        shopping experience across devices.
+      </p>
+
+      {/* FEATURES */}
+      <ul className="text-gray-400 mt-4 list-disc list-inside space-y-1">
+        <li>Designed dynamic product listing and cart functionality</li>
+        <li>Implemented real-time cart updates using JavaScript</li>
+        <li>Optimized layout for mobile and desktop responsiveness</li>
+        <li>Created a clean, agriculture-themed UI design</li>
+      </ul>
+
+      {/* TECH STACK */}
+      <p className="mt-4 text-sm text-blue-400">
+        Tech: HTML, CSS, JavaScript
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
       {/* CONTACT */}
       <section id="contact" className="py-24 text-center">
