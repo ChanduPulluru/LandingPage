@@ -91,7 +91,13 @@ export default function Home() {
     ))}
 
   </div>
-
+  <a
+  href="https://github.com/ChanduPulluru"
+  target="_blank"
+  className="inline-block mt-6 px-6 py-3 border border-gray-600 rounded-lg hover:bg-gray-800 transition"
+>
+  GitHub Profile
+</a>
 </section>
 
       {/* SERVICES */}
@@ -210,6 +216,13 @@ export default function Home() {
       <section id="contact" className="py-24 text-center">
         <h2 className="text-4xl font-bold mb-6">Contact</h2>
         <p className="text-gray-400">chandupulluru33@gmail.com</p>
+        <a
+      href="https://www.linkedin.com/in/chandu-pulluru-92249728b/"
+      target="_blank"
+      className="block text-blue-500 hover:underline"
+    >
+      LinkedIn
+    </a>
       </section>
 
       {/* FOOTER */}
